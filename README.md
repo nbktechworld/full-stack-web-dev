@@ -1,6 +1,8 @@
 # Full Stack Web Dev
 
-This is a list of suggested tutorials and exercises for you to do following our lecture. Feel free to write down anything you didn't understand so you can ask later in another meeting or on the Discord server.
+The lectures will cover how to build a message board application end to end, from the frontend to the backend.
+
+You can further strengthen your fundamental knowledge following the lecture with the following list of suggested tutorials and exercises. Feel free to write down anything you don't understand so you can ask later in another meeting or on the Discord server.
 
 ## Day 1 - HTML
 
