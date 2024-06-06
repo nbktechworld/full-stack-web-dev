@@ -1,5 +1,12 @@
 # Full Stack Web Dev
 
+We'll meet Monday through Thursday from 7-9 PM Eastern Time (ET).
+
+|| Mon | Tue | Wed | Thu | Fri |
+|-|-|-|-|-|-|
+|**Week 1** | June 17 | June 18 | June 19 | June 20 | - |
+|**Week 2**| June 24 | June 25 | June 26  | June 27  | - |
+
 The lectures will cover how to build a message board application end to end, from the frontend to the backend.
 
 You can further strengthen your fundamental knowledge following the lecture with the following list of suggested tutorials and exercises. Feel free to write down anything you don't understand so you can ask later in another meeting or on the Discord server.
