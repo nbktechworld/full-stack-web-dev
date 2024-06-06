@@ -11,6 +11,8 @@ The lectures will cover how to build a message board application end to end, fro
 
 You can further strengthen your fundamental knowledge following the lecture with the following list of suggested tutorials and exercises. Feel free to write down anything you don't understand so you can ask later in another meeting or on the Discord server.
 
+If you have found value from the bootcamp, please consider [making a donation/tip](https://linktr.ee/nbktechworld).
+
 ## Day 1 - HTML
 
 ### Before we meet
