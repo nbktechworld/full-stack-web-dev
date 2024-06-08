@@ -1,6 +1,6 @@
 # Full Stack Web Dev
 
-We'll meet Monday through Thursday from 7-9 PM Eastern Time (ET).
+We'll meet Monday through Thursday from 7-9 PM Eastern Time (ET). Each day is split into two 50-minute sessions, with a 10-minute break in between.
 
 || Mon | Tue | Wed | Thu | Fri |
 |-|-|-|-|-|-|
