@@ -13,7 +13,7 @@ You can further strengthen your fundamental knowledge following the lecture with
 
 If you have found value from the bootcamp, please consider [making a donation/tip](https://linktr.ee/nbktechworld).
 
-Note that the goal of the bootcamp is to expose you and guide you through the technologies. No one becomes a master from night to day. No one can magically make you a software developer in just a couple of days. It is up to you to keep on studying and practicing on your own and being consistent at it.
+Note that the goal of the bootcamp is to expose you and guide you through the technologies. No one becomes a master from night to day. No one can magically make you a professional software developer in just a couple of days. It is up to you and you only to keep on studying and practicing on your own and being consistent at it, so you can become a master of your own.
 
 ## Day 1 - HTML
 
