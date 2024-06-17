@@ -1,5 +1,8 @@
 # Full Stack Web Dev
 
+**THE MEETING LINKS ARE AVAILABLE AT** https://www.nbktechworld.com/live-events
+Please click `(camera icon) Online event`.
+
 We'll meet Monday through Thursday from 7-9 PM Eastern Time (ET). Each day is split into two 50-minute sessions, with a 10-minute break in between.
 
 || Mon | Tue | Wed | Thu | Fri |
