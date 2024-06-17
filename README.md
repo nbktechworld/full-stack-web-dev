@@ -1,7 +1,8 @@
 # Full Stack Web Dev
 
 ## **THE MEETING LINKS ARE AVAILABLE AT**
-https://www.nbktechworld.com/live-events  
+https://www.nbktechworld.com/live-events
+
 Please click `(camera icon) Online event`.
 
 ## Overview
