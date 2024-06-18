@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <form action="https://jsonplaceholder.typicode.com/users" method="POST">
+      <div>
+        <label for="sign-up-form-name">Name</label>
+        <input type="text" id="sign-up-form-name" name="name" required>
+      </div>
+      <div>
+        <label>Email</label>
+        <input type="email" name="email" required>
+      </div>
+      <div>
+        <label>Password</label>
+        <input type="password" name="password">
+      </div>
+      <div>
+        <label>Date of Birth</label>
+        <input type="date" name="dateOfBirth">
+      </div>
+      <div>
+        <div>Notification Preference</div>
+        <label><input type="radio" name="notificationPreference"> Email</label>
+        <label><input type="radio" name="notificationPreference"> Phone</label>
+        <label><input type="radio" name="notificationPreference"> None</label>
+      </div>
+      <div>
+        <label>Write About Yourself</label>
+        <textarea name="biography"></textarea>
+      </div>
+      <div>
+        <div>
+          <label><input type="checkbox" name="agreeToTerms" value="true"> I agree to the terms and conditions</label>
+        </div>
+        <div>
+          <label><input type="checkbox" name="subscribeToNewsLetter"> Subscribe to newsletter</label>
+        </div>
+      </div>
+      <div>
+        <input type="submit" value="Sign Up">
+      </div>
+    </form>
+  </body>
+</html>
