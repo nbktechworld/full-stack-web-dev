@@ -13,3 +13,19 @@ Video: <https://www.youtube.com/watch?v=v5ZcDwQriEM>
 ## How to Run
 
 Open `index.html` in the browser.
+
+# Day 1 - Session 2 - HTML Forms
+
+Video: <https://www.youtube.com/watch?v=EXRL7U4RMjE>
+
+<a href="https://www.youtube.com/watch?v=EXRL7U4RMjE">
+  <img src="https://img.youtube.com/vi/EXRL7U4RMjE/0.jpg">
+</a>
+
+## Screenshot
+
+![](screenshot-signup.png)
+
+## How to Run
+
+Open `signup.html` in the browser.
