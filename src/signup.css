@@ -1,0 +1,35 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group > label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.form-group > input,
+.form-group > textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+}
+
+.form-group > input[type='date'] {
+  width: auto;
+}
+
+.form-group > input:focus {
+  border-color: #86b7fe;
+  outline: none;
+  box-shadow: 0px 0px 4px rgb(13 110 253 / 25%);
+}
+
+#sign-up-form {
+  max-width: 300px;
+}
