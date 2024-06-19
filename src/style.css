@@ -1,0 +1,47 @@
+.list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.list > li {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 6px;
+  margin-right: 12px;
+}
+
+.list > li:last-child {
+  margin-right: 0;
+}
+
+.list > li > a {
+  padding: 12px;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+.list > li > a:hover {
+  background-color: lightgrey;
+}
+
+.list > li > a:active {
+  background-color: red;
+}
+
+.point {
+  color: red;
+}
+.highlight {
+  background-color: yellow;
+}
+
+#paragraph1 {
+  color: rgb(0, 0, 0);
+  background-color: #95ffcd;
+  text-align:center;
+}
+strong {
+  background-color: black;
+}
