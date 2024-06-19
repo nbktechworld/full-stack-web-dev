@@ -33,3 +33,12 @@ body {
 #sign-up-form {
   max-width: 300px;
 }
+
+form input[type='submit'] {
+  background-color: #0d6efd;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  width: 100%;
+  border: 1px solid #0d6efd;
+}
