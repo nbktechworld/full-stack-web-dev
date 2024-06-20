@@ -7,6 +7,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: docker run --name validatorcontainer -d --rm -p 8888:8888 -v src:/app-src ghcr.io/validator/validator:latest
-      - run: docker exec validatorcontainer vnu-runtime-image/bin/vnu app-src/*.html
+      - uses: Cyb3r-Jak3/html5validator-action
+        with:
+          root: src/
+          blacklist: invalid
