@@ -1,0 +1,14 @@
+name: Test
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check HTML
+        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+        with:
+          root: src/
