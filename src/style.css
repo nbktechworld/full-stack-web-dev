@@ -1,3 +1,34 @@
+.side-bar {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  background-color: hsla(210, 9%, 91%, 0.527);
+  width: 150px;
+  border-radius: 5px;
+  top: 100px;
+  overflow: hidden;
+}
+
+.side-bar ul {
+  list-style: none;
+}
+.side-bar li{
+  margin: 5px;
+}
+.side-bar a {
+  text-decoration: none;
+  color: hsl(195, 70%, 50%);
+}
+.side-bar a:hover {
+  color: hsl(195, 70%, 60%);
+  text-decoration: underline;
+}
+
+
+.main-body-container {
+  margin-left: 170px;
+}
+
 .list {
   list-style-type: none;
   padding-left: 0;
