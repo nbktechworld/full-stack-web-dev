@@ -5,6 +5,7 @@ on:
       - master
 jobs:
   deploy:
+    if: github.repository == 'nbktechworld/full-stack-web-dev'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
