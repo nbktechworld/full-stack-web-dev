@@ -1,0 +1,16 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: sudo apt update -y && sudo apt install -y awscli
+      - run: aws configure set region us-east-1 --profile nbktechworld
+      - run: aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }} --profile nbktechworld
+      - run: aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }} --profile nbktechworld
+      - run: mkdir -p dist && cp src/*.html dist && cp src/*.css dist
+      - run: aws s3 cp dist/ s3://nbktechworld/bootcamp-2024-06-17 --endpoint-url=http://us-southeast-1.linodeobjects.com --profile nbktechworld --recursive --acl public-read
