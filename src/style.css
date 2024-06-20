@@ -8,10 +8,15 @@
   top: 100px;
   overflow: hidden;
 }
-.side-bar a {
-  margin: 2px;
-  text-decoration: none;
+
+.side-bar ul {
   list-style: none;
+}
+.side-bar li{
+  margin: 5px;
+}
+.side-bar a {
+  text-decoration: none;
   color: hsl(195, 70%, 50%);
 }
 .side-bar a:hover {
