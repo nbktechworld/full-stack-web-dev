@@ -1,6 +1,10 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+#main-container {
+  display: flex;
+  justify-content: center;
+}
 
 .form-group {
   margin-bottom: 12px;
