@@ -34,8 +34,10 @@
     </ul>
     <h2 class="point">Duis Aute</h2>
     <p>Quis nostrud exercitation ullamco <a href="https://yahoo.com" target="_blank">laboris</a> nisi ut aliquip ex ea commodo consequat.</p>
-    <img src="https://www.rd.com/wp-content/uploads/2016/01/04-dog-breeds-dalmation.jpg" width="150" alt="a Dalmatian dog">
-    <audio src="https://github.com/nbktechworld/introduction-to-html/raw/abcdac58651ba724c40665c82dd55f171534115f/document-two-sections/barking.mp3" controls></audio>
+    <img src="https://www.rd.com/wp-content/uploads/2016/01/04-dog-breeds-dalmation.jpg" width="150" alt="a Dalmatian dog" id="thumbnail">
+    <button type="button" onclick="nextImage()">Next Image</button>
+    <button type="button" onclick="bark()">🐶🤚Pat the dog</button>
+    <audio class="js-audio-player" src="https://github.com/nbktechworld/introduction-to-html/raw/abcdac58651ba724c40665c82dd55f171534115f/document-two-sections/barking.mp3"></audio>
     <ol>
       <li>first point</li>
       <li>second point</li>
@@ -43,6 +45,6 @@
     </ol>
     <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" controls width="300"></video>
     </div>
-    
+    <script src="script.js"></script>
   </body>
 </html>
