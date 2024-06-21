@@ -38,3 +38,18 @@ body {
 .btn:active{
     background-color: hsl(195, 100%, 50%);   
 }
+
+#message-list {
+  margin-top: 16px;
+}
+
+#message-list > .message-list-item {
+  margin-bottom: 16px;
+}
+
+.message-list-item {
+  border: 1px solid black;
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 1px black;
+}

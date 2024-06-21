@@ -9,11 +9,14 @@
 <body>
   <h1>Messages</h1>
   <div class="container">
-    <form action="https://jsonplaceholder.typicode.com/posts" method="POST" id="new-message-form">
+    <form action="https://jsonplaceholder.typicode.com/posts" method="POST" id="new-message-form" onsubmit="addMessage(event)">
       <label for="new-message-form-comment" class="form-label">Leave a comment</label>
       <textarea name="comment" id="new-message-form-comment" placeholder="type anything here"></textarea>
       <button type="submit" class="btn">submit</button>
     </form>
+    <div id="message-list">
+    </div>
   </div>
+  <script src="messages.js"></script>
 </body>
 </html>
