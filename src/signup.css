@@ -43,21 +43,17 @@ form input[type='submit'] {
   border: 1px solid #0d6efd;
 }
 
-/*BreadCrumb CSS*/
 .breadcrumb > ul {
   display: flex;
   padding: 15px;
   list-style: none;
   background-color: #eee;
 }
-
-/* Add a slash symbol (/) before/behind each list item */
 .breadcrumb li+li:before {
   padding: 8px;
   color: black;
   content: "/\00a0";
 }
-
 .breadcrumb li a:hover {
   color: #01447e;
   text-decoration: underline;
