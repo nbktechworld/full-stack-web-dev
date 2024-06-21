@@ -1,5 +1,7 @@
 body {
   font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 .form-group {
