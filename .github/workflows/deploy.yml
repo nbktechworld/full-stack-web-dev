@@ -13,5 +13,5 @@ jobs:
       - run: aws configure set region us-east-1 --profile nbktechworld
       - run: aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }} --profile nbktechworld
       - run: aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }} --profile nbktechworld
-      - run: mkdir -p dist && cp src/*.html dist && cp src/*.css dist
+      - run: mkdir -p dist && cp src/*.html dist && cp src/*.css dist && cp src/*.js dist
       - run: aws s3 cp dist/ s3://nbktechworld/bootcamp-2024-06-17 --endpoint-url=http://us-southeast-1.linodeobjects.com --profile nbktechworld --recursive --acl public-read
