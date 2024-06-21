@@ -3,12 +3,11 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-#form {
+#new-message-form {
     display: flex;
     flex-direction: column;
 }
@@ -17,7 +16,7 @@ body {
     font-size: 1.5rem;
 }
 
-#messages {
+#new-message-form-comment {
     width: 300px;
     height: 150px;
     margin: 2px 0px 5px 0px;
@@ -38,4 +37,19 @@ body {
 }
 .btn:active{
     background-color: hsl(195, 100%, 50%);   
+}
+
+#message-list {
+  margin-top: 16px;
+}
+
+#message-list > .message-list-item {
+  margin-bottom: 16px;
+}
+
+.message-list-item {
+  border: 1px solid black;
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 1px black;
 }
