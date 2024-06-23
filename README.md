@@ -126,3 +126,21 @@ We recommend your smartphone be connected to the same WiFi network as your compu
 
 - [ ] https://reactnative.dev/docs/tutorial
 - [ ] https://reactnative.dev/docs/getting-started
+
+
+## Contributions
+
+When contributing to this and other open source projects, please adhere to the following best practices:
+
+1. **Express Interest**: Before starting work on an issue, please comment on the issue to express your interest in working on it. This helps us coordinate and avoid duplicate efforts.
+   
+2. **Wait for Assignment**: After expressing interest, please wait to be officially assigned to the issue. This ensures that everyone is aware of who is working on what, preventing conflicting or redundant solutions.
+
+3. **First-Come, First-Served**: Issues are assigned on a first-comment, first-serve basis. If multiple people comment on an issue, the earliest comment will be given priority for assignment.
+
+By following these steps, we can minimize wasted effort and manage contributions more effectively.
+
+Thank you for your cooperation and for helping us improve the project!
+
+
+
