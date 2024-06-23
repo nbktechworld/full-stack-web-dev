@@ -38,7 +38,8 @@ body {
   max-width: 300px;
 }
 
-form input[type='submit'] {
+form input[type='submit'],
+form button[type='submit'] {
   background-color: #0d6efd;
   color: white;
   padding: 6px 12px;
