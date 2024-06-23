@@ -45,3 +45,20 @@ Video: <https://www.youtube.com/watch?v=hNwpzWtQ6os>
 <a href="https://www.youtube.com/watch?v=hNwpzWtQ6os">
   <img src="https://img.youtube.com/vi/hNwpzWtQ6os/0.jpg">
 </a>
+
+<br>
+<br>
+
+## Contributions
+
+When contributing to this and other open source projects, please adhere to the following best practices:
+
+1. ***Express Interest***: Before starting work on an issue, please comment to express your interest in working on it. This helps us coordinate and avoid duplicate efforts.
+   
+2. ***Wait for Assignment***: After expressing interest, please wait to be officially assigned to the issue. This ensures that everyone is aware of who is working on what, preventing conflicting or redundant solutions.
+
+3. ***First-Comment, First-Served***: If multiple people comment on the same issue, the earliest comment will be given priority for assignment.
+
+By following these steps, we can minimize wasted effort and manage contributions more effectively.
+
+Thank you for your cooperation and for helping us improve the project!
