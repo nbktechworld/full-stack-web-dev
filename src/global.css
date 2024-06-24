@@ -3,3 +3,13 @@
     background-color: gainsboro;
     padding: 10px;
 }
+
+.site-header {
+    background-color: hsl(194, 100%, 66%);
+    text-indent: 20px;
+}
+
+.site-header-heading {
+    text-decoration: none;
+    color: white;
+}
