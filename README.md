@@ -126,6 +126,3 @@ We recommend your smartphone be connected to the same WiFi network as your compu
 
 - [ ] https://reactnative.dev/docs/tutorial
 - [ ] https://reactnative.dev/docs/getting-started
-
-
-
