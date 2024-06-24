@@ -67,3 +67,8 @@ form button[type='submit'] {
   color: #01447e;
   text-decoration: underline;
 }
+
+footer {
+  text-align: center;
+  background-color: gainsboro;
+}
