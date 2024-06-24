@@ -1,3 +1,7 @@
+body {
+  font-family: Montserrat, sans-serif;
+}
+
 .side-bar {
   display: flex;
   position: fixed;
@@ -71,5 +75,3 @@
   background-color: #95ffcd;
   text-align:center;
 }
-
-
