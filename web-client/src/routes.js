@@ -2,6 +2,7 @@ import React from 'react';
 import App from './App';
 import ResetPasswordForm from './components/reset-password-form';
 import Messages from './pages/messages';
+import Signup from './pages/signup';
 
 const routes = [
   {
@@ -19,6 +20,10 @@ const routes = [
       {
         path: '/messages',
         element: <Messages />
+      },
+      {
+        path: '/signup',
+        element: <Signup/>
       }
     ]
   },

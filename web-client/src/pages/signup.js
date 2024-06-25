@@ -1,7 +1,7 @@
 import '../components/signup.css';
 import '../global.css';
 
-export default function signup(){
+export default function Signup(){
     return (
         <>
         <header className="site-header">
