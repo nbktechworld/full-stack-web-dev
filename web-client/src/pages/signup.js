@@ -57,9 +57,6 @@ export default function Signup(){
         </form>
       </div>
     </main>
-    <footer className="site-footer">
-      Copyright &copy; Full Stack Web Dev
-    </footer>
     </>
     );
 }
