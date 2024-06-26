@@ -6,7 +6,9 @@ import './global.css';
 function App() {
   return (
     <div>
-      <header>This is the header</header>
+      <header className="site-header">
+        <h1><a href="/" className="site-header-heading">FSWD</a></h1>
+      </header>
       <main>
         <Outlet />
       </main>
