@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <header className="site-header">
-        <h1><a href="index.html" className="site-header-heading">FSWD</a></h1>
+        <h1><a href="/" className="site-header-heading">FSWD</a></h1>
       </header>
       <main>
         <Outlet />
