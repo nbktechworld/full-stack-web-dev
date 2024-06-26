@@ -7,7 +7,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import routes from './routes';
 
-const router = createBrowserRouter(routes);
+const router = createBrowserRouter(routes, {
+  basename: process.env.PUBLIC_URL,
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
