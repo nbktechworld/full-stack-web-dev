@@ -4,9 +4,7 @@ import '../global.css';
 export default function Signup(){
     return (
         <>
-        <header className="site-header">
-      <h1><a href="index.html" className="site-header-heading">FSWD</a></h1>
-    </header>
+
     <main>
       <nav aria-label="breadcrumb" className="breadcrumb">
         <ul>
