@@ -15,10 +15,10 @@ jobs:
       - run: aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }} --profile nbktechworld
       - run: mkdir -p dist && cp src/*.html dist && cp src/*.css dist && cp src/*.js dist
       - run: aws s3 cp dist/ s3://nbktechworld/bootcamp-2024-06-17 --endpoint-url=http://us-southeast-1.linodeobjects.com --profile nbktechworld --recursive --acl public-read
-      # - run: cd web-client && npm install
-      # - run: aws configure set region us-east-1 --profile full-stack-web-dev-bootcamp
-      # - run: aws configure set aws_access_key_id ${{ secrets.FSWDB_AWS_ACCESS_KEY_ID }} --profile full-stack-web-dev-bootcamp
-      # - run: aws configure set aws_secret_access_key ${{ secrets.FSWDB_AWS_SECRET_ACCESS_KEY }} --profile full-stack-web-dev-bootcamp
-      # # - run: echo "PUBLIC_URL=/bootcamp-2024-06-17/web-client" > web-client/.env
-      # - run: aws s3 website s3://full-stack-web-dev-bootcamp --index-document index.html --error-document index.html --endpoint-url=http://us-southeast-1.linodeobjects.com --profile full-stack-web-dev-bootcamp
-      # - run: cd web-client && npm run build && aws s3 cp build/ s3://full-stack-web-dev-bootcamp --endpoint-url=http://us-southeast-1.linodeobjects.com --profile full-stack-web-dev-bootcamp --recursive --acl public-read
+      - run: cd web-client && npm install
+      - run: aws configure set region us-east-1 --profile full-stack-web-dev-bootcamp
+      - run: aws configure set aws_access_key_id ${{ secrets.FSWDB_AWS_ACCESS_KEY_ID }} --profile full-stack-web-dev-bootcamp
+      - run: aws configure set aws_secret_access_key ${{ secrets.FSWDB_AWS_SECRET_ACCESS_KEY }} --profile full-stack-web-dev-bootcamp
+      # - run: echo "PUBLIC_URL=/bootcamp-2024-06-17/web-client" > web-client/.env
+      - run: aws s3 website s3://full-stack-web-dev-bootcamp --index-document index.html --error-document index.html --endpoint-url=http://us-southeast-1.linodeobjects.com --profile full-stack-web-dev-bootcamp
+      - run: cd web-client && npm run build && aws s3 cp build/ s3://full-stack-web-dev-bootcamp --endpoint-url=http://us-southeast-1.linodeobjects.com --profile full-stack-web-dev-bootcamp --recursive --acl public-read
