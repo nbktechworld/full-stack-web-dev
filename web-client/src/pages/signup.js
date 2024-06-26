@@ -2,10 +2,8 @@ import '../components/signup.css';
 import '../global.css';
 
 export default function Signup(){
-    return (
-        <>
-
-    <main>
+  return (
+    <>
       <nav aria-label="breadcrumb" className="breadcrumb">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -54,7 +52,6 @@ export default function Signup(){
           </div>
         </form>
       </div>
-    </main>
     </>
-    );
+  );
 }
