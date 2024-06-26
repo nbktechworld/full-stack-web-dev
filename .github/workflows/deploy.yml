@@ -15,5 +15,5 @@ jobs:
       - run: aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }} --profile nbktechworld
       - run: mkdir -p dist && cp src/*.html dist && cp src/*.css dist && cp src/*.js dist
       - run: aws s3 cp dist/ s3://nbktechworld/bootcamp-2024-06-17 --endpoint-url=http://us-southeast-1.linodeobjects.com --profile nbktechworld --recursive --acl public-read
-      - run: cd web-client && npm install && npm run build && aws s3 cp build/ s3://nbktechworld/bootcamp-2024-06-17/web-client --endpoint-url=http://us-southeast-1.linodeobjects.com --profile nbktechworld --recursive --acl public-read
-
+      - run: cd web-client && npm install
+      - run: PUBLIC_URL=/bootcamp-2024-06-17/web-client cd web-client && npm run build && aws s3 cp build/ s3://nbktechworld/bootcamp-2024-06-17/web-client --endpoint-url=http://us-southeast-1.linodeobjects.com --profile nbktechworld --recursive --acl public-read
