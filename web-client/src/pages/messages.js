@@ -6,11 +6,21 @@ export default function Messages(props) {
 
   function addMessage(event) {
     event.preventDefault();
-    
-    setPosts([
-      { title: comment },
-      ...posts,
-    ]);
+
+    fetch('http://localhost:3001/messages', {
+      method: 'POST',
+      body: JSON.stringify({ comment: comment }),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    }).then((response) => response.json())
+      .then((createdMessage) => {
+        setPosts([
+          createdMessage,
+          ...posts,
+        ]);
+      })
+
 
     setComment('');
   }
@@ -18,7 +28,7 @@ export default function Messages(props) {
   const [posts, setPosts] = React.useState([]);
 
   React.useEffect(function() {
-    fetch('https://jsonplaceholder.typicode.com/posts').then(function(response){
+    fetch('http://localhost:3001/messages').then(function(response){
       return response.json()
     }).then(function(retrievedPosts) {
   
@@ -26,6 +36,7 @@ export default function Messages(props) {
     }).catch(function(error) {
       // handle the error.
       // e.g. inject an error message to document
+      console.error(error);
     });
   }, []);
 
@@ -37,7 +48,7 @@ export default function Messages(props) {
     <>
       <h1>Messages</h1>
       <div className="container">
-        <form action="https://jsonplaceholder.typicode.com/posts" method="POST" id="new-message-form" onSubmit={addMessage}>
+        <form id="new-message-form" onSubmit={addMessage}>
           <label htmlFor="new-message-form-comment" className="form-label">Leave a comment</label>
           <textarea name="comment" id="new-message-form-comment" placeholder="type anything here" value={comment} onChange={onCommentChange}></textarea>
           <button type="submit" className="btn">submit</button>
@@ -45,7 +56,7 @@ export default function Messages(props) {
         <div>
           {posts.map(function(post) {
             return (
-              <div className="message-list-item">{post.title}</div>
+              <div className="message-list-item" key={post.id}>{post.comment}</div>
             );
           })}
         </div>
