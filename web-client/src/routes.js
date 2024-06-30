@@ -3,6 +3,7 @@ import App from './App';
 import ResetPasswordForm from './components/reset-password-form';
 import Messages from './pages/messages';
 import Signup from './pages/signup';
+import Signin from './pages/signin';
 
 const routes = [
   {
@@ -24,6 +25,10 @@ const routes = [
       {
         path: '/signup',
         element: <Signup/>
+      },
+      {
+        path: '/signin',
+        element: <Signin/>
       }
     ]
   },
