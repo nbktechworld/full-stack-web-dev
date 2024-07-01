@@ -48,6 +48,25 @@ async function setupApp() {
 
   });
 
+  app.post('/users', async (req, res) => {
+    try {
+      const { name, email, password, dateOfBirth, notificationPreference, biography, agreeToTerms, subscribeToNewsLetter } = req.body;
+      const user = await pgClient.query('SELECT * FROM  users WHERE email = $1', [email]);
+      if(user.rows.length !== 0){
+        return res.send({ error: 'email already exists' });
+      }
+      if (!user.password || user.password.length < 6){
+        return res.status(401).send({ message: 'password has to be more than 6 characters' });
+      }
+
+      const userData = await pgClient.query('INSERT INTO users (name, email, birthdate, notification_preference, terms_agreed, newsletter_subscribed) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *', [name, email, password, dateOfBirth, notificationPreference, biography, agreeToTerms, subscribeToNewsLetter ]);
+      return res.send(userData);
+    } catch(err){
+      console.error(err.message)
+      return res.status(500).send({error: 'Internal server error'});
+    }
+  });
+
   // REST naming CONVENTION for endpoint paths:
   // retrieve all things:   GET /resource
   // retrieve one thing:    GET /resource/:resourceId  (express req.params.resourceId)
@@ -55,7 +74,7 @@ async function setupApp() {
   // update one thing:      PUT /resource/:resourceId
   // partial update thing:  PATCH /resource/:resourceId
   // create one thing:      POST /resource
-  
+
   const port = 3001;
   app.listen(port, function() {
     console.log(`Server is running at http://localhost:${port}`);
