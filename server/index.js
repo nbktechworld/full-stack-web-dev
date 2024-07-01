@@ -50,19 +50,20 @@ async function setupApp() {
 
   app.post('/users', async (req, res) => {
     try {
-      const { name, email, password, birthdate, notification_preference, biography, terms_agreed, newsletter_subscribed } = req.body;
-      const user = await pgClient.query(`SELECT * FROM  messages WHERE email = $1`, [email]);
+      const { name, email, password, dateOfBirth, notificationPreference, biography, agreeToTerms, subscribeToNewsLetter } = req.body;
+      const user = await pgClient.query('SELECT * FROM  users WHERE email = $1', [email]);
       if(user.length !== 0){
-        return res.json({ error: 'email already exists' });
+        return res.send({ error: 'email already exists' });
       }
-      if (user.password.length < 6){
-        return res.status(401).json({ message: 'password has to be more than 6 characters' });
+      if (!user.password || user.password.length < 6){
+        return res.status(401).send({ message: 'password has to be more than 6 characters' });
       }
 
-      const userData = await pgClient.query(`INSERT INTO users (name, email, birthdate, notification_preference, terms_agreed, newsletter_subscribed) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`, [name, email, password, birthdate, notification_preference, biography, terms_agreed, newsletter_subscribed ]);
-      return res.json(userData);
+      const userData = await pgClient.query(`INSERT INTO users (name, email, birthdate, notification_preference, terms_agreed, newsletter_subscribed) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`, [name, email, password, dateOfBirth, notificationPreference, biography, agreeToTerms, subscribeToNewsLetter ]);
+      return res.send(userData);
     } catch(err){
       console.error(err.message)
+      return res.status(500).send({error: 'Internal server error'});
     }
   });
 
