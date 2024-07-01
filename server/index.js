@@ -59,7 +59,7 @@ async function setupApp() {
         return res.status(401).send({ message: 'password has to be more than 6 characters' });
       }
 
-      const userData = await pgClient.query(`INSERT INTO users (name, email, birthdate, notification_preference, terms_agreed, newsletter_subscribed) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`, [name, email, password, dateOfBirth, notificationPreference, biography, agreeToTerms, subscribeToNewsLetter ]);
+      const userData = await pgClient.query('INSERT INTO users (name, email, birthdate, notification_preference, terms_agreed, newsletter_subscribed) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *', [name, email, password, dateOfBirth, notificationPreference, biography, agreeToTerms, subscribeToNewsLetter ]);
       return res.send(userData);
     } catch(err){
       console.error(err.message)
