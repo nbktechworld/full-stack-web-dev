@@ -48,16 +48,20 @@ async function setupApp() {
 
   });
 
-  app.post('/signup', async (req, res) => {
-    try{
-      const { email, password } = req.body;
+  app.post('/users', async (req, res) => {
+    try {
+      const { name, email, password, birthdate, notification_preference, biography, terms_agreed, newsletter_subscribed } = req.body;
       const user = await pgClient.query(`SELECT * FROM  messages WHERE email = $1`, [email]);
       if(user.length !== 0){
         return res.json({ error: 'email already exists' });
       }
-      const insertData = await pgClient.query(`INSERT INTO messages (comment, author_id, created_at) VALUES ($1, $2) RETURNING *`, [email, password]);
-      return res.json({ message: 'User created successfully', redirect: '/login' });
-    }catch(err){
+      if (user.password.length < 6){
+        return res.status(401).json({ message: 'password has to be more than 6 characters' });
+      }
+
+      const userData = await pgClient.query(`INSERT INTO users (name, email, birthdate, notification_preference, terms_agreed, newsletter_subscribed) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`, [name, email, password, birthdate, notification_preference, biography, terms_agreed, newsletter_subscribed ]);
+      return res.json(userData);
+    } catch(err){
       console.error(err.message)
     }
   });
