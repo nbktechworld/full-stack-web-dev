@@ -52,7 +52,7 @@ async function setupApp() {
     try {
       const { name, email, password, dateOfBirth, notificationPreference, biography, agreeToTerms, subscribeToNewsLetter } = req.body;
       const user = await pgClient.query('SELECT * FROM  users WHERE email = $1', [email]);
-      if(user.length !== 0){
+      if(user.rows.length !== 0){
         return res.send({ error: 'email already exists' });
       }
       if (!user.password || user.password.length < 6){
