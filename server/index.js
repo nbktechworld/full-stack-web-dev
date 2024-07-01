@@ -48,6 +48,20 @@ async function setupApp() {
 
   });
 
+  app.post('/signup', async (req, res) => {
+    try{
+      const { email, password } = req.body;
+      const user = await pgClient.query(`SELECT * FROM  messages WHERE email = $1`, [email]);
+      if(user.length !== 0){
+        return res.json({ error: 'email already exists' });
+      }
+      const insertData = await pgClient.query(`INSERT INTO messages (comment, author_id, created_at) VALUES ($1, $2) RETURNING *`, [email, password]);
+      return res.json({ message: 'User created successfully', redirect: '/login' });
+    }catch(err){
+      console.error(err.message)
+    }
+  });
+
   // REST naming CONVENTION for endpoint paths:
   // retrieve all things:   GET /resource
   // retrieve one thing:    GET /resource/:resourceId  (express req.params.resourceId)
@@ -55,7 +69,7 @@ async function setupApp() {
   // update one thing:      PUT /resource/:resourceId
   // partial update thing:  PATCH /resource/:resourceId
   // create one thing:      POST /resource
-  
+
   const port = 3001;
   app.listen(port, function() {
     console.log(`Server is running at http://localhost:${port}`);
