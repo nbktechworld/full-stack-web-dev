@@ -12,10 +12,10 @@ export default function Signup(){
         biography: '',
         notificationPreference: '',
         agreeToTerms: false,
-        subscribeToNewsletter: false
+        subscribeToNewsLetter: false
     });
 
-    const { name, email, password, dateOfBirth, biography, notificationPreference, agreeToTerms, subscribeToNewsletter } = inputs;
+    const { name, email, password, dateOfBirth, biography, notificationPreference, agreeToTerms, subscribeToNewsLetter } = inputs;
     const navigate = useNavigate()
 
     const onChange = e => {
@@ -28,7 +28,7 @@ export default function Signup(){
 
     const onSubmit = async (e) => {
       e.preventDefault();
-      const body = { name, email, password, dateOfBirth, biography, notificationPreference, agreeToTerms, subscribeToNewsletter };
+      const body = { name, email, password, dateOfBirth, biography, notificationPreference, agreeToTerms, subscribeToNewsLetter };
       try {
         const r = await fetch('http//localhost:3001/users', {
         method: 'POST',
