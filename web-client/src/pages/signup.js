@@ -11,34 +11,39 @@ export default function Signup(){
         dateOfBirth: '',
         biography: '',
         notificationPreference: '',
-        agreeToTerms: '',
-        subscribeToNewsletter: '',
+        agreeToTerms: false,
+        subscribeToNewsletter: false
     });
+
     const { name, email, password, dateOfBirth, biography, notificationPreference, agreeToTerms, subscribeToNewsletter } = inputs;
     const navigate = useNavigate()
 
     const onChange = e => {
-    setInputs({ ...inputs, [e.target.name]: e.target.value })
+      setInputs({ ...inputs, [e.target.name]: e.target.value })
+    }
+
+  const checkState = e =>{
+    setInputs({...inputs, [e.target.name]: e.target.checked});
     }
 
     const onSubmit = async (e) => {
-    e.preventDefault();
-    const body = { name, email, password, dateOfBirth, biography, notificationPreference, agreeToTerms, subscribeToNewsletter };
-    try {
-       const r = await fetch('http://localhost:3001/users', {
-       method: 'POST',
-       headers: { 'Content-type': 'application/json' },
-       body: JSON.stringify(body),
-       });
-       const response = await r.json();
-       if(response){
-       navigate('/signin');
-       }
+      e.preventDefault();
+      const body = { name, email, password, dateOfBirth, biography, notificationPreference, agreeToTerms, subscribeToNewsletter };
+      try {
+        const r = await fetch('http//localhost:3001/users', {
+        method: 'POST',
+        headers: { 'Content-type': 'application/json' },
+        body: JSON.stringify(body),
+        });
 
-    } catch (error) {
+        if(r.ok === false){
+          throw new Error('response sent back an error');
+        };
+        navigate('/signin');
+
+      } catch (error) {
        console.error(error.message);
-
-    }
+      }
     }
 
   return (
@@ -53,19 +58,19 @@ export default function Signup(){
         <form id="sign-up-form" onSubmit={ onSubmit }>
           <div className="form-group">
             <label htmlFor="sign-up-form-name">Name</label>
-            <input type="text" id="sign-up-form-name" name="name"  value={name} onChange={e => onChange(e)} required/>
+            <input type="text" id="sign-up-form-name" name="name" value={name} onChange={onChange} required/>
           </div>
           <div className="form-group">
             <label htmlFor="sign-up-form-email">Email</label>
-            <input type="email" name="email" required id="sign-up-form-email" value={email}  onChange={e => onChange(e)}/>
+            <input type="email" name="email" required id="sign-up-form-email" value={email}  onChange={onChange}/>
           </div>
           <div className="form-group">
             <label htmlFor="sign-up-form-password">Password</label>
-            <input type="password" name="password" id="sign-up-form-password" value={password}  onChange={e => onChange(e)}/>
+            <input type="password" name="password" id="sign-up-form-password" value={password}  onChange={onChange}/>
           </div>
           <div className="form-group">
             <label htmlFor="sign-up-form-dob">Date of Birth</label>
-            <input type="date" name="dateOfBirth" id="sign-up-form-dob" value={dateOfBirth}  onChange={e => onChange(e)}/>
+            <input type="date" name="dateOfBirth" id="sign-up-form-dob" value={dateOfBirth}  onChange={onChange}/>
           </div>
           <div className="form-group">
             <label>Notification Preference</label>
@@ -80,10 +85,10 @@ export default function Signup(){
           </div>
           <div className="form-group">
             <div>
-              <label><input type="checkbox" name="agreeToTerms" value='true' onChange={e =>onChange(e)} /> I agree to the terms and conditions</label>
+              <label><input type="checkbox" name="agreeToTerms" onChange={checkState} /> I agree to the terms and conditions</label>
             </div>
             <div>
-              <label><input type="checkbox" name="subscribeToNewsLetter" value='true' onChange={e => onChange(e)} /> Subscribe to newsletter</label>
+              <label><input type="checkbox" name="subscribeToNewsLetter" onChange={checkState}  /> Subscribe to newsletter</label>
             </div>
           </div>
           <div>
