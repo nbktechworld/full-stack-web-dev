@@ -25,7 +25,7 @@ export default function Signup(){
     e.preventDefault();
     const body = { name, email, password, dateOfBirth, biography, notificationPreference, agreeToTerms, subscribeToNewsletter };
     try {
-       const r = await fetch('http://localhost:3001', {
+       const r = await fetch('http://localhost:3001/users', {
        method: 'POST',
        headers: { 'Content-type': 'application/json' },
        body: JSON.stringify(body),
